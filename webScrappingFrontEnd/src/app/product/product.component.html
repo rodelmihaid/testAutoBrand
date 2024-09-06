@@ -1,0 +1,15 @@
+<!-- src/app/components/product/product.component.html -->
+<div class="container">
+  <h1>Product Scraper</h1>
+  <div>
+    <input [(ngModel)]="productCode" placeholder="Enter Product Code" />
+    <button (click)="searchProduct()">Search</button>
+  </div>
+
+  <div *ngIf="product">
+    <h2>{{ product.productName }}</h2>
+    <p>Price: {{ product.price }}</p>
+    <p>Availability: {{ product.availability }}</p>
+    <p>Manufacturer: {{ product.manufacturer }}</p>
+  </div>
+</div>
